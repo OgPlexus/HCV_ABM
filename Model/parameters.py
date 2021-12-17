@@ -1,7 +1,7 @@
 import numpy as np
 
 Params = {#'identity': 'locSIS_rndTreatA0',
-          'identity': 'treat_test',
+          'identity': 'reproducibility_test',
           'p0': 1,
           'pclr0': 10*[0.26],
           #'pclr0': np.linspace(0, 0.5, 10),
