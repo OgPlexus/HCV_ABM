@@ -9,6 +9,6 @@
 
 module load python/3.5.2
 
-python3 HCV_Sim_v2_0.py $SLURM_ARRAY_JOB_ID $SLURM_ARRAY_TASK_ID
+python3 run_simulation.py $SLURM_ARRAY_JOB_ID $SLURM_ARRAY_TASK_ID
 
 sbatch --output=/dev/null --error=/dev/null

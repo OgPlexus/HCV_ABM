@@ -1,27 +1,26 @@
 import numpy as np
 
-Params = {#'identity': 'locSIS_rndTreatA0',
-          'identity': 'reproducibility_test',
-          'p0': 1,
-          'pclr0': 10*[0.26],
-          #'pclr0': np.linspace(0, 0.5, 10),
-          'pclr1': np.zeros(10),
-          'adhere': np.linspace(0, 1, 10)[9],
-          'treatment start': 1825, # 4000
-          'sis start': 4000, # 1825
-          'rand treat': True,
-          'local sis': True,
-          'use': 0.5,
-          'decay': 0.96,
-          'share': 0.10,
-          'relocate': 1/90,
-          'nep': [0] * 10,
-          'treatment': np.linspace(0.05, 0.5, 10),
-          'connect': 1 / 9,
-          'nep daily rate': 1 / 7,
-          'death': 1/365}
-          #'clr nep': np.linspace(0, 1, 10),
-          #'clr treat': np.linspace(0, 1, 10)}
+Params = {'identity': 'reproducibility_test',         # for saving files (will need to construct a folder first)
+          'p0': 1,                                    # fraction of type-0 individuals
+          'pclr0': np.ones(10)*0.26,                  # rate of clearing for type-0 individuals (across run indices)
+          'pclr1': np.zeros(10),                      # rate of clearing for type-1 individuals (across run indices)
+          'adhere': 1,                                # fraction adhering to treatment program
+          'num agents': 1000,                         # total number of individuals in the population (fixed)
+          'episode length': 3650,                     # number of days to run the infection
+          'treatment start': 1825,                    # day at which to begin treatment in population 
+          'sis start': 4000,                          # day at which to begin safe-injection-site program          
+          'rand treat': True,                         # False if individuals are selected for treatment based on degree, otherwise chosen randomly
+          'local sis': True,                          # True if SIS is centered in the city, False is spread-out in a grid
+          'use': 0.5,                                 # probability of injecting per person per day
+          'decay': 0.96,                              # probability of viral decay on a needle per day
+          'share': 0.10,                              # probability of sharing a needle (given the decision to inject) per person per day
+          'relocate': 1/90,                           # probability of changing node location (forms new edges)
+          'death': 1/365,                             # probabilty of death/leaving network per person per day (=birth rate)
+          'treatment': np.linspace(0.05, 0.5, 10)     # fraction in treatment (across run indices)
+        #   'nep': [0] * 10,                            # 
+        #   'connect': 1 / 9,                           #  
+        #   'nep daily rate': 1 / 7,                    #
+          }
 
 
 """

@@ -4,11 +4,11 @@ import numpy as np
 from parameters import Params
 
 """ parameters from Params """
-p_use = Params['use']  # 0.5
-p_share = Params['share']  # 0.45
-p_decay = Params['decay']  # 0.96
-p_death = Params['death']  # 3 * 10 ** (-4)
-p_connect = Params['connect']  # 1 / 9
+p_use = Params['use'] 
+p_share = Params['share']  
+p_decay = Params['decay']  
+p_death = Params['death']  
+# p_connect = Params['connect']  # 1 / 9
 p_adhere = Params['adhere']
 t_start = Params['treatment start']
 sis_start = Params['sis start']
